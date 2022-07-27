@@ -1,0 +1,82 @@
+@import url('reset.css');
+/* Paleta de cores do blog */
+* {
+  --corMaisClara: #f8f8f9;
+  --azulFraco: #4fa6de;
+  --azulMedio: #2e68c0;
+  --azulForte: #0f1495;
+  --pretoForte: #090808;
+  --cinzaClaro: #a9adab;
+  --cinzaEscuro: #514744;
+  --amareloOcre: #ba7c34;
+  
+}
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.topo img {
+  display: block;
+  width: 100%;
+  height: 755px;
+  object-fit: cover;  
+}
+
+.container {
+  width: 2000px;
+  margin: 0 auto;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;  
+}
+
+.imgTopo{      
+  height: 755px;  
+  background: url("../img/imgTopo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+}
+
+.imgTopo img{  
+  display: block;
+  width: 170px;
+  height: 170px;    
+}
+
+.nomeBlog{    
+  display: flex;
+  align-items: center;
+}
+
+.nomeBlog h1{
+font-size: 3.5rem;
+letter-spacing: 0.2em;
+color: var(--corMaisClara);
+}
+
+.nomeBlog span{
+  display: block;
+}
+
+.menu {
+  display: flex;
+  padding: 1rem 2rem;
+  gap: 60px;  
+}
+
+.menu li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--corMaisClara);
+  
+}
+.teste{
+  display: flex;
+  justify-content: space-between;
+}
+
