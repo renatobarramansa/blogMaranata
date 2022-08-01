@@ -1,0 +1,145 @@
+@import url('reset.css');
+/* Paleta de cores do blog */
+* {
+  --corMaisClara: #f8f8f9;
+  --azulFraco: #4fa6de;
+  --azulMedio: #2e68c0;
+  --azulForte: #0f1495;
+  --pretoForte: #090808;
+  --cinzaClaro: #a9adab;
+  --cinzaEscuro: #514744;
+  --amareloOcre: #ba7c34;  
+}
+html{
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.topo img {
+  display: block;
+  width: 100%;
+  height: 755px;
+  object-fit: cover;  
+}
+
+.container {
+  width: 2000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;  
+}
+
+.imgTopo{          
+  height: 755px;  
+  background: url("../img/imgTopo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  
+}
+
+.imgTopo img{  
+  display: block;
+  width: 170px;
+  height: 170px;    
+}
+
+.imgTopo p{
+  text-align: center;
+  margin-top: 178px;
+  font-size: 4rem;
+  color: var(--corMaisClara);
+}
+
+.nomeBlog{    
+  display: flex;
+  align-items: center;
+}
+
+.nomeBlog h1{
+font-size: 3.5rem;
+letter-spacing: 0.2em;
+color: var(--corMaisClara);
+}
+
+.nomeBlog span{
+  display: block;
+}
+
+.menu {
+  display: flex;
+  padding: 1rem 2rem;
+  gap: 60px;  
+}
+
+.menu li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--corMaisClara);
+  
+}
+
+.loginSenha{
+  display: grid;   
+  margin-top: 30px;     
+  justify-content: end;
+}
+
+.loginSenha input[type="text"]{      
+  border-radius: 50px;
+  border:solid 1px rgb(186, 186, 193);   
+  /* background-color: #0f1495; */
+  padding: 20px 100px 20px 0px;
+}
+
+
+.loginSenha p{
+  display: flex;
+  align-items: center;
+  font-family: 'roboto';
+  font-size: 1.5rem;  
+  padding-top: 10px;
+}
+
+.loginSenha p::before{
+  content: '';  
+  display: inline-block;
+  width: 50px;
+  height: 50px;  
+  background: url(../icones/setaPequena.svg);
+}
+
+.loginSenha a {  
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: #078a1f;
+  border-radius: 50px;
+  color: white;
+  
+}
+
+::-webkit-input-placeholder{
+  display: flex;  
+  color: rgb(176, 176, 188);  
+  font-family: 'roboto';
+  font-size: 1.75rem;  
+  text-align: end;
+}
+
+
+::-webkit-input-placeholder::before{
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url('../icones/cadeado.svg');
+}
