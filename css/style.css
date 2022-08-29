@@ -1,4 +1,5 @@
-@import url('reset.css');
+@import url("reset.css");
+@import url("conteudo.css");
 /* Paleta de cores do blog */
 * {
   --corMaisClara: #f8f8f9;
@@ -9,7 +10,13 @@
   --cinzaClaro: #a9adab;
   --cinzaEscuro: #514744;
   --amareloOcre: #ba7c34;
-  
+  --textoPrincipal:#363636;
+}
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+  height: 2000px;
 }
 img {
   display: block;
@@ -21,68 +28,157 @@ img {
   display: block;
   width: 100%;
   height: 755px;
-  object-fit: cover;  
+  object-fit: cover;
 }
 
 .container {
-  width: 2000px;
+  max-width: 100%;  
   margin: 0 auto;
   box-sizing: border-box;
 }
+
 .container-header {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;  
 }
 
-.imgTopo{          
-  height: 755px;  
+.imgTopo {
+  height: 755px;
   background: url("../img/imgTopo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
-  
 }
 
-.imgTopo img{  
+
+  
+
+
+.imgTopo img {
   display: block;
   width: 170px;
-  height: 170px;    
+  height: 170px;
 }
 
-.imgTopo p{
+.imgTopo p { /*Texto automático*/  
+  display: grid;  
   text-align: center;
   margin-top: 178px;
   font-size: 4rem;
+  text-transform: uppercase;  
   color: var(--corMaisClara);
 }
 
-.nomeBlog{    
+.imgTopo p::after {  
+  content: '';
+  justify-self: center;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-image:url("../icones/setaPequena.svg");
+  transform: rotate(90deg);
+  margin-top: 300px;
+  cursor: pointer;
+}
+
+.nomeBlog {
   display: flex;
   align-items: center;
 }
 
-.nomeBlog h1{
-font-size: 3.5rem;
-letter-spacing: 0.2em;
-color: var(--corMaisClara);
+.nomeBlog h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.2em;  
+  color: var(--corMaisClara);
+  text-transform: uppercase;
 }
 
-.nomeBlog span{
+
+.nomeBlog span {
   display: block;
 }
 
 .menu {
   display: flex;
   padding: 1rem 2rem;
-  gap: 60px;  
+  gap: 60px;
 }
 
 .menu li a {
   text-decoration: none;
   font-size: 2rem;
   color: var(--corMaisClara);
-  
 }
 
+.loginSenha {
+  display: grid;
+  margin-top: 30px;
+  justify-content: end;
+}
 
+.loginSenha input[type="text"] {
+  font-family: "roboto";
+  font-size: 1.25rem;
+  text-align: center;
+  color: white;
+  border-radius: 50px;
+  /* border:solid 1px rgb(186, 186, 193);    */
+  background-color: rgb(37, 138, 172);
+  padding: 20px 100px 20px 0px;
+  border: none;
+}
+
+.loginSenha input[type="text"]:focus {
+  outline: none;
+  border: 1px solid var(--azulForte);
+}
+
+.loginSenha span {
+  display: flex;
+  align-items: center;
+  font-family: "roboto";
+  font-size: 1rem;
+  padding-top: 15px;
+  color: var(--azulMedio);
+}
+
+span a {
+  text-decoration: none;
+  color: var(--azulFraco);
+}
+
+span a:hover {
+  color: var(--azulForte);
+}
+
+/* .loginSenha p::before{
+  content: '';  
+  display: inline-block;
+  width: 50px;
+  height: 50px;  
+  background: url(../icones/setaPequena.svg);
+} */
+
+a.botao {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: #075477;
+  border-radius: 50px;
+  color: white;
+}
+
+::-webkit-input-placeholder {
+  margin-right: -45px;
+  color: rgb(180, 164, 164);
+  font-family: "roboto";
+  font-size: 1.25rem;
+}
+
+::-webkit-input-placeholder::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url("../icones/cadeado.svg");
+}
