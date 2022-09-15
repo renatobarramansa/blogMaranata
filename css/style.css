@@ -1,5 +1,6 @@
 @import url("reset.css");
-@import url("conteudo.css");
+@import url("conteudo-main.css");
+@import url("conteudo-cards.css");
 /* Paleta de cores do blog */
 * {
   --corMaisClara: #f8f8f9;
@@ -10,13 +11,13 @@
   --cinzaClaro: #a9adab;
   --cinzaEscuro: #514744;
   --amareloOcre: #ba7c34;
-  --textoPrincipal:#363636;
+  --textoPrincipal:#1a1a1a;
 }
-body {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+body {  
   font-weight: 300;
   box-sizing: border-box;
   height: 2000px;
+  background-color: #ebedf3;
 }
 img {
   display: block;
@@ -31,7 +32,7 @@ img {
   object-fit: cover;
 }
 
-.container {
+.container {  
   max-width: 100%;  
   margin: 0 auto;
   box-sizing: border-box;
@@ -43,16 +44,14 @@ img {
   align-items: center;  
 }
 
-.imgTopo {
-  height: 755px;
+.imgTopo {  
+
+  height: 550px;
   background: url("../img/imgTopo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center right;
-}
-
-
-  
+  background-position: center right;  
+}  
 
 
 .imgTopo img {
@@ -64,23 +63,12 @@ img {
 .imgTopo p { /*Texto automático*/  
   display: grid;  
   text-align: center;
-  margin-top: 178px;
-  font-size: 4rem;
+  margin-top: 108px;
+  font-size: 2.5rem;
   text-transform: uppercase;  
   color: var(--corMaisClara);
 }
 
-.imgTopo p::after {  
-  content: '';
-  justify-self: center;
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-image:url("../icones/setaPequena.svg");
-  transform: rotate(90deg);
-  margin-top: 300px;
-  cursor: pointer;
-}
 
 .nomeBlog {
   display: flex;
@@ -88,8 +76,8 @@ img {
 }
 
 .nomeBlog h1 {
-  font-size: 3.5rem;
-  letter-spacing: 0.2em;  
+  font-size: 2.5rem;
+  line-height: 1.1;
   color: var(--corMaisClara);
   text-transform: uppercase;
 }
@@ -107,7 +95,7 @@ img {
 
 .menu li a {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--corMaisClara);
 }
 
@@ -181,4 +169,25 @@ a.botao {
   width: 50px;
   height: 50px;
   background: url("../icones/cadeado.svg");
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.flex img{
+  display: block;
+  width: 60px;
+  height: 60px;
+  /* transform: rotate(90deg); */
+}
+
+.flex img:hover{
+  display: block;
+  width: 60px;
+  height: 60px;
+  transform: rotate(90deg);
+  transition: 0.9s;
 }

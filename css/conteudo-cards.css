@@ -1,0 +1,82 @@
+.conteudo-cards-container{
+  width: 1400px;
+  margin: 0 auto;  
+}
+
+.cols3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  
+}
+
+.cols3 h1 {
+  margin-bottom: 20px;
+  justify-self: center;
+  font-size: 1.75rem;  
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.cards-fotos{  
+  display: grid;
+  background-color: white;
+  border-radius: 8px;    
+  box-shadow: 5px 5px 5px rgb(207, 201, 201);
+}
+
+.cards-fotos img {
+  display: block;
+  width: 460px;  
+  height: 306px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform .1s linear;
+}
+
+.cards-fotos img:hover{
+transform: scale(1.1);
+}
+
+.cards-texto{  
+  display: grid;
+  padding: 1rem 2rem;
+  line-height: 1.6;  
+  padding-bottom: 50px;
+  
+}
+
+.cards-texto a{  
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  font-size: 1.5rem;
+  align-items: center;  
+  text-decoration: none;
+  color: black;  
+  margin-top: 40px;
+  background-color: rgb(202, 207, 252);
+  border-radius: 8px;
+  justify-self: end;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  
+}
+.cards-texto a::after {
+  display:inline-block;
+  content: '';
+  width: 34px;
+  height: 47px;
+  background-image: url('../icones/setaPequena.svg');  
+}
+
+
+
+.cards-texto a:hover::after{ 
+  transform: rotate(90deg);
+  transition: 0.9s;
+  
+}
+.end{
+  justify-self: center;
+}
